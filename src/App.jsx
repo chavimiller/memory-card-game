@@ -8,6 +8,8 @@ function App() {
   const [score, setScore] = useState(0);
   const [clicked, setClicked] = useState([]);
 
+  const [best, setBest] = useState(0);
+
   const [cats, setCats] = useState([]);
   const [cards, setCards] = useState([]);
   const apiKey =
@@ -47,6 +49,7 @@ function App() {
 
   function handleCardClick(card) {
     if (clicked.includes(card.id)) {
+      score > best ? setBest(score) : null;
       setScore(0);
       setClicked([]);
     } else {
@@ -69,7 +72,11 @@ function App() {
             remember which cards you already clicked and only click the ones you
             haven't!
           </div>
-          <div className="score">{score}</div>
+          <div className="score-board">
+            <div className="score">Current Score: {score}</div>
+            <div className="best">Best Score: {best}</div>
+          </div>
+
           <div className="card-grid">
             {cards.map((card) => (
               <Card

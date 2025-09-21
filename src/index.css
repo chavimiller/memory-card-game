@@ -74,7 +74,7 @@ button:focus-visible {
   max-height: 100vh;
   align-items: center;
   justify-content: space-around;
-  gap: 18px;
+  gap: 10px;
 }
 
 .card-container {
@@ -83,6 +83,7 @@ button:focus-visible {
   width: 280px;
   height: 300px;
   overflow: hidden;
+  justify-content: center;
   border: 3px transparent;
   border-radius: 24px;
   box-shadow:  2px 3px 12px 2px rgba(0, 0, 0, 0.25);
@@ -93,6 +94,7 @@ img {
   max-width: 300px;
   height: auto;
   display: flex;
+  justify-self: center;
 }
 
 .instructions {
@@ -102,4 +104,19 @@ img {
 h2 {
   padding: 0;
   margin: 0;
+}
+
+.score-board {
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.score {
+  color: #535bf2;
+}
+
+.best {
+  color: #43ae45;
 }
