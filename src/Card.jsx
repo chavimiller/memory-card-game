@@ -1,7 +1,7 @@
 function Card({ cardData, onClick }) {
   return (
     <>
-      <div className="card-container">
+      <div className="card-container" onClick={onClick}>
         <div className="card-picture">
           <img src={cardData.imgUrl} alt="cat picture" />
         </div>
