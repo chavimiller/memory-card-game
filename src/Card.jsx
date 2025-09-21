@@ -1,4 +1,5 @@
 function Card({ cardData, onUpdate }) {
+  const apiKey = process.env.API_KEY;
   function handleInputChange() {
     onUpdate({
       ...cardData,
